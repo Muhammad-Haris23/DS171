@@ -1,10 +1,16 @@
+# Load required libraries
 library(ggplot2)
+library(dplyr)
+library(scales)
+
 data <- read.csv("D:/Msc Cyber security/Semester A/Team Research & Project development/Git/DS171/top_200_password_2020_by_country updated.csv")
 filtered_data <- data[data$country %in% c("Australia", "Canada"), ]
 # Categorize password strength based on our ranges
 filtered_data$password_strength <- cut(filtered_data$Time_to_crack_in_seconds,
                                        breaks = c(-Inf, 60, 3600, 86400, Inf), # time intervals for Weak, Moderate, Strong, Very Strong
                                        labels = c("Weak", "Moderate", "Strong", "Very Strong"))
+
+
 # Combine 'Strong' and 'Very Strong' into 'Strongest'
 filtered_data$password_strength <- ifelse(filtered_data$password_strength %in% c("Strong", "Very Strong"),
                                           "Strongest", 
@@ -18,27 +24,28 @@ filtered_data <- filtered_data %>%
 
 
 # Calculate proportions
-library(dplyr)
 proportions <- filtered_data %>%
   group_by(country, password_strength) %>%
   summarise(count = n(), .groups = "drop") %>%
   group_by(country) %>%
   mutate(proportion = count / sum(count))
 
-# Enhanced bar plot with labels and custom colors
-plot <- ggplot(proportions, aes(x = password_strength, y = proportion, fill = country)) +
-  geom_bar(stat = "identity", position = "dodge") +
+# Stacked bar plot
+password_plot <- ggplot(proportions, aes(x = country, y = proportion, fill = password_strength)) +
+  geom_bar(stat = "identity") +
   geom_text(aes(label = scales::percent(proportion)), 
-            position = position_dodge(width = 0.8), 
-            vjust = -0.5) + # Add text labels for proportions above bars
+            position = position_stack(vjust = 0.5)) + # Center labels inside bars
   labs(title = "Proportion of Password Strength Categories in Australia and Canada",
-       x = "Password Strength Category",
-       y = "Proportion") +
-  scale_fill_manual(values = c("Australia" = "blue", "Canada" = "red")) + # Custom colors
+       x = "Country",
+       y = "Proportion",
+       fill = "Password Strength") +
+  scale_y_continuous(labels = scales::percent) + # Display proportions as percentages
+  scale_fill_manual(values = c("Weak" = "red", "Moderate" = "orange", "Strongest" = "green")) + # Custom colors
   theme_minimal()
 
+
 # Display plot
-print(plot)
+print(password_plot)
 # Create a contingency table for Chi-square test
 contingency_table <- table(filtered_data$password_strength, filtered_data$country)
 print(contingency_table)
