@@ -1,0 +1,130 @@
+commit adaba2e01b77491e3f614c1a00126aa084c7d43d
+Author: usamabinkhalid <emailusama.khalid@gmail.com>
+Date:   Tue Jan 7 16:24:50 2025 +0500
+
+    Added filtered_dataset.csv file
+    
+    Co-Authored-By: Muhammad-Haris23 <184260375+Muhammad-Haris23@users.noreply.github.com>
+
+commit b06da092d69030c2ac9d24158a96444fb744dde3
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Tue Jan 7 09:41:07 2025 +0000
+
+    Log file
+
+commit 733e604de69de2843371939378c2718597776188
+Merge: 926f6f1 cca045f
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Tue Jan 7 09:31:58 2025 +0000
+
+    Change side by side to Stacked bar chart
+
+commit 926f6f1c37dcd5c0a6b4d6d4cd63e98cb2f75f40
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Tue Jan 7 09:23:28 2025 +0000
+
+    Change side by side chart to stacked bar chart
+
+commit cca045f3f0651610303d5b314d7adb6a703941b2
+Author: Shoaib Latif <sl24abz@herts.ac.uk>
+Date:   Tue Jan 7 00:48:35 2025 +0000
+
+    Code updated for stacked bar chart
+    
+    Code updated for stacked bar chart
+
+commit 225e8b17a6463a411a970f91e62bd25ccb428509
+Author: Shoaib Latif <sl24abz@herts.ac.uk>
+Date:   Tue Jan 7 00:46:57 2025 +0000
+
+    Revert "Code updated for stacked bar chart"
+    
+    This reverts commit 4d6c2b7a57dedb3c03494b0258e766a48237e883.
+
+commit 4d6c2b7a57dedb3c03494b0258e766a48237e883
+Author: Shoaib Latif <sl24abz@herts.ac.uk>
+Date:   Tue Jan 7 00:42:12 2025 +0000
+
+    Code updated for stacked bar chart
+    
+    Code updated for stacked bar chart
+    
+    Co-Authored-By: 7com1079 <184936501+7com1079@users.noreply.github.com>
+    Co-Authored-By: ahmedakram23 <188879466+ahmedakram23@users.noreply.github.com>
+    Co-Authored-By: Muhammad-Haris23 <184260375+Muhammad-Haris23@users.noreply.github.com>
+    Co-Authored-By: usamabinkhalid <184603893+usamabinkhalid@users.noreply.github.com>
+    Co-Authored-By: ma24afd <184603996+ma24afd@users.noreply.github.com>
+
+commit ce1d19f669f4ca5f933eb90c7c5d5964de3aec8c
+Author: ma24afd <ma24afd@herts.ac.uk>
+Date:   Wed Dec 4 03:58:09 2024 +0000
+
+    Code updated
+    
+    Code updated
+
+commit ae8a0e02e6ae5ff507317b42032ac020924094be
+Author: ma24afd <ma24afd@herts.ac.uk>
+Date:   Wed Dec 4 03:34:50 2024 +0000
+
+    Create .Rhistory
+
+commit 2f64417e74b79aa435c2ddc86a4e8412dd2964e6
+Merge: 15713e2 bfba347
+Author: ahmedakram23 <ma23aux@herts.ac.uk>
+Date:   Mon Nov 25 07:20:33 2024 +0000
+
+    Merge pull request #1 from Muhammad-Haris23/ahmedakram23-patch-1
+    
+    Create Updated_Password_Dataset_with_Password_Strength
+
+commit bfba34702eb0cadddb91df28c36026d3bf45eff1
+Author: ahmedakram23 <ma23aux@herts.ac.uk>
+Date:   Mon Nov 25 07:17:45 2024 +0000
+
+    Create Updated_Password_Dataset_with_Password_Strength
+    
+    I have added a new column, Password_Strength, to the dataset. This column classifies each password into Strong, Moderate, or Weak based on its length and composition.
+
+commit 15713e21b16e3cd4c3ec6639b9876b5a1e8c13b3
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Sun Nov 24 12:23:20 2024 +0000
+
+    Updated R script with password strength categorization and Chi-square test results
+
+commit d2a4fc2b4e0c5924f357a2d0a726ba5dc0037769
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Fri Nov 22 17:41:42 2024 +0000
+
+    Updated password strength categorization for Australia and Canada
+
+commit 795c490e5e1fc113c49bb7d6b9e78db6f7396673
+Merge: f8107c9 42d8a85
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Fri Nov 22 16:49:05 2024 +0000
+
+    Merge branch 'main' of https://github.com/Muhammad-Haris23/DS171
+
+commit f8107c902099505917a35d8b3ac4340cabc13d65
+Author: Muhammad Haris Bashir <hb23acn@herts.ac.uk>
+Date:   Fri Nov 22 16:45:28 2024 +0000
+
+    Add dataset for analysis
+
+commit 42d8a85f101e9ef9c93d6698fbd1b9e1467648f9
+Author: usamabinkhalid <emailusama.khalid@gmail.com>
+Date:   Tue Nov 19 01:42:19 2024 +0500
+
+    Added PNG visualization for password strength comparison
+
+commit 57eff464acbf12de24023f6ff1e01f67be961f7b
+Author: usamabinkhalid <emailusama.khalid@gmail.com>
+Date:   Tue Nov 19 01:40:03 2024 +0500
+
+    Updated visualization script with improved data categorization
+
+commit 82b02e1c8ad2d8da57841dc589e77b9c54fb9288
+Author: usamabinkhalid <emailusama.khalid@gmail.com>
+Date:   Tue Nov 19 01:24:17 2024 +0500
+
+    Initial commit for Assignment 1
