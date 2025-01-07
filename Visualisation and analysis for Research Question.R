@@ -36,30 +36,17 @@ proportions <- filtered_data %>%
   group_by(country) %>%
   mutate(proportion = count / sum(count))
 
-library(ggplot2)
-library(scales)
-
-# Example data
-proportions <- data.frame(
-  password_strength = rep(c("Weak", "Medium", "Strong"), 2),
-  proportion = c(0.3, 0.5, 0.2, 0.4, 0.4, 0.2),
-  country = rep(c("Australia", "Canada"), each = 3)
-)
-
-# Stacked bar chart
+# Enhanced bar plot with labels and custom colors
 plot <- ggplot(proportions, aes(x = password_strength, y = proportion, fill = country)) +
-  geom_bar(stat = "identity", position = "stack") + # Use "stack" for stacked bars
-  geom_text(aes(label = scales::percent(proportion, accuracy = 1)),
-            position = position_stack(vjust = 0.5), # Place labels at the middle of each stack
-            size = 3.5) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = scales::percent(proportion)), 
+            position = position_dodge(width = 0.8), 
+            vjust = -0.5) + # Add text labels for proportions above bars
   labs(title = "Proportion of Password Strength Categories in Australia and Canada",
        x = "Password Strength Category",
-       y = "Proportion",
-       fill = "Country") +
-  scale_fill_manual(values = c("Australia" = "blue", "Canada" = "red")) +
-  theme_minimal() +
-  theme(plot.title = element_text(hjust = 0.5)) # Center title
-
+       y = "Proportion") +
+  scale_fill_manual(values = c("Australia" = "blue", "Canada" = "red")) + # Custom colors
+  theme_minimal()
 
 # Display plot
 print(plot)
