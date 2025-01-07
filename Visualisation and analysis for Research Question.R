@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Load required libraries
 library(ggplot2)
 library(dplyr)
@@ -23,6 +22,15 @@ filtered_data$password_strength <- factor(filtered_data$password_strength,
 filtered_data <- filtered_data %>%
   filter(!is.na(Time_to_crack_in_seconds) & !is.na(country))
 
+# Save the filtered and updated dataset to a new file
+write.csv(filtered_data, "filtered_dataset.csv", row.names = FALSE)
+
+# Remove rows with missing country or Time_to_crack_in_seconds
+filtered_data <- filtered_data %>%
+  filter(!is.na(Time_to_crack_in_seconds) & !is.na(country))
+
+# Save the filtered and updated dataset to a new file
+write.csv(filtered_data, "filtered_dataset.csv", row.names = FALSE)
 
 # Calculate proportions
 proportions <- filtered_data %>%
@@ -126,4 +134,4 @@ print(contingency_table)
 chi_test <- chisq.test(contingency_table)
 print(chi_test)
 
->>>>>>> cca045f3f0651610303d5b314d7adb6a703941b2
+
